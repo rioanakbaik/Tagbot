@@ -1,0 +1,13 @@
+{
+  "name": "server-tag-bot",
+  "version": "1.0.0",
+  "description": "Bot Discord auto role berdasarkan Server Tag (Primary Guild)",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "discord.js": "^14.16.0",
+    "dotenv": "^16.4.5"
+  }
+}
