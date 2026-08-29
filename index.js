@@ -42,6 +42,10 @@ async function syncRole(member, user) {
 
 client.once(Events.ClientReady, async (c) => {
   console.log(`✅ Bot online sebagai ${c.user.tag}`);
+  client.user.setPresence({
+    activities: [{ name: 'metaverse', type: 0 }],
+    status: 'online',
+  });
   const guild = await client.guilds.fetch(GUILD_ID).catch(() => null);
   if (!guild) return console.error('❌ Bot tidak ada di server.');
   const members = await guild.members.fetch();
