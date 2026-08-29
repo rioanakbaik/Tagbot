@@ -43,7 +43,11 @@ async function syncRole(member, user) {
 client.once(Events.ClientReady, async (c) => {
   console.log(`✅ Bot online sebagai ${c.user.tag}`);
   client.user.setPresence({
-    activities: [{ name: 'metaverse', type: 0 }],
+    activities: [{
+      name: 'metaverse',
+      type: 1,
+      url: 'https://www.twitch.tv/metaverse'
+    }],
     status: 'online',
   });
   const guild = await client.guilds.fetch(GUILD_ID).catch(() => null);
